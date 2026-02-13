@@ -19,6 +19,12 @@
             quick-tap-ms = <120>;
             require-prior-idle-ms = <70>;
             bindings = <&kp>, <&kp>;
+        },
+        td_mt: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt 1 BSPC>, <&kp BSPC>;
         };
     };
 
@@ -45,7 +51,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &td_mt
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
