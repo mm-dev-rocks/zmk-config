@@ -19,7 +19,7 @@
             quick-tap-ms = <120>;
             require-prior-idle-ms = <70>;
             bindings = <&kp>, <&kp>;
-        },
+        };
         td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
